@@ -1,0 +1,33 @@
+.todo-layout{
+    width: 40vw;
+    height: 96vh;
+    border-radius: 20px;
+    background: rgb(248, 248, 248);
+    color: rgb(73, 73, 73);
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        .project-section{
+            margin-top: 10px;
+            width: 90%;
+        }
+        .todo-section{
+            width: 90%;
+            margin-top: 15px;
+        }
+        .upcoming-section{
+            width: 90%;
+            margin-top: 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .todo-layout{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}

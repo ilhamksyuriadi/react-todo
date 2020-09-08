@@ -1,0 +1,14 @@
+.main-layout{
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(15, 18, 29);
+}
+
+@media (max-width: 768px) {
+    .main-layout{
+        flex-wrap: wrap;
+    }
+}

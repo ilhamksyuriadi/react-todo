@@ -1,0 +1,11 @@
+.project-layout{
+    width: 50vw;
+    height: 96vh;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .project-layout{
+        width: 80%;
+    }
+}

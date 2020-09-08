@@ -1,0 +1,102 @@
+.todo-item{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    // justify-content: space-between;
+    // checkbox container all the styling need for custom checkbox
+    .checkbox-container{
+        display: block;
+        position: relative;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        input {
+            // hide default
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            // custom checkbox
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: rgb(209, 209, 209);
+            border-radius: 50%;
+        }
+        .checkmark-disabled {
+            // custom checkbox
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+        input:checked ~ .checkmark {
+            // color when checked
+            background-color: #46d8dd;
+        }
+        .checkmark:after {
+            // Create the checkmark/indicator (hidden when not checked)
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        input:checked ~ .checkmark:after {
+            // Show the checkmark when checked
+            display: block;
+        }
+        .checkmark:after {
+            // Style the checkmark/indicator
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    .todo-name{
+        margin-left: 35px;
+        width: 70%;
+    }
+    .todo-status{
+        text-align: center;
+        width: 20%;
+        font-size: 15px;
+        .todo-status-Approved{
+            color: green;
+            background: rgb(209, 255, 209);
+            border-radius: 20px;
+            height: 25px;
+            font-weight: 500;
+         }
+         .todo-status-InProgress{
+            color: rgb(163, 165, 49);
+            background: rgb(238, 255, 177);
+            border-radius: 20px;
+            height: 25px;
+            font-weight: 500;
+         }
+         .todo-status-Waiting{
+            color: rgb(138, 138, 138);
+            background: rgb(241, 241, 241);
+            border-radius: 20px;
+            height: 25px;
+            font-weight: 500;
+         }
+    }
+}
