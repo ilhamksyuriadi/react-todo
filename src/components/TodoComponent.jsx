@@ -13,16 +13,13 @@ export default class TodoComponent extends Component {
         this.handleCheckbox = this.handleCheckbox.bind(this)
     }
 
-    componentDidMount(){
-        console.log('didmount called')
+    componentWillMount(){
         axios.get('https://demo1283417.mockable.io/todos')
             .then(res => {
-                console.log(res.data.todos)
                 this.setState({
                     ...this.state,
                     todos: res.data.todos
                 })
-                console.log(this.state)
             })
             .catch(err => {
                 console.log(err)
@@ -80,7 +77,7 @@ export default class TodoComponent extends Component {
             <div className="todo-layout">
                 <div className="content">
                     <div className="project-section">
-                        <h1>Cyber Punk</h1>
+                        <h1>Crypto Punk</h1>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing 
                             and typesetting industry.
