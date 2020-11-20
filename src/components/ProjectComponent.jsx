@@ -40,7 +40,7 @@ export default class ProjectComponent extends Component {
         return (
             <div className="project-layout">
                 <div className="content">
-                    <h1>Hi Hasna,</h1>
+                    <h1>Hi Ashri,</h1>
                     <p>Welcome back to the workspace, we missed you!</p>
                     <input type="text" name="" id="" placeholder="Search Task or Project"/>
                     <h2>Projects <span>({this.state.count})</span></h2>
